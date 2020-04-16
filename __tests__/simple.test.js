@@ -1,8 +1,28 @@
 import {Enemy, Player} from './../src/main.js'
 
-// describe('Player Methods',()=>{
+describe('Player Methods',()=>{
+  test('check if enemy is dead', ()=>{
+  let player = new Player('Eric')
+  player.health = 0 ;
+  expect(player.isDead()).toBeTruthy()
+  })
+  test('check if enemy is Alive', ()=>{
+    let player = new Player('Eric')
+  expect(player.isDead()).toBeFalsy()
+  })
+  test('subtract damage from enemy', ()=>{
+    let player = new Player('Eric')
+    player.getDamage(5);
+  expect(player.health).toBe(95)
+  })
+  test('Deal Damage', ()=>{
+    let player = new Player('Eric')
+    
+  expect(player.dealDamage()).toBe(20)
+  })
 
-// })
+})
+
 describe('Enemy Methods',()=>{
   test("test that Enemy pupulate method gives right info for human",()=>{
     let humanEnemy = new Enemy('human');
@@ -40,7 +60,7 @@ describe('Enemy Methods',()=>{
       let humanEnemy = new Enemy('human');
       humanEnemy.populateEnemy();
       humanEnemy.getDamage(5);
-    expect(humanEnemy.enemyHealth).toBe(15)
+    expect(humanEnemy.enemyHealth).toBe(45)
     })
 })
 

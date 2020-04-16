@@ -12,6 +12,16 @@ export class Player{
     damage: 20
     }
   }
+
+  isDead(){
+    if( this.health <= 0){return true} else {return false}
+   }
+   getDamage(dmg){
+     this.health -= dmg;
+   }
+   dealDamage(){
+     return this.weapon.damage
+   }
 }
 // human, chimeara, minotaur 
 export class Enemy {
@@ -23,14 +33,17 @@ export class Enemy {
   populateEnemy(){
     if(this.enemyType === 'human'){
       this.enemyHealth = 50;
-      this.damageOutout = 20;
-    }else if( this.enemyType === 'chimera'){
+      this.damageOutput = 20;
+    } else if( this.enemyType === 'chimera'){
       this.enemyHealth = 100;
-      this.damageOutout = 25; 
-    }else if( this.enemyType === 'minotaur'){
+      this.damageOutput = 25; 
+    } else if( this.enemyType === 'minotaur'){
       this.enemyHealth = 150;
-      this.damageOutout = 15; 
-    }
+      this.damageOutput = 15; 
+    } else if( this.enemyType === 'scylla') {
+      this.enemyHealth = 110;
+      this.damageOutput = 35;
+    } 
   }
   isDead(){
    if( this.enemyHealth <= 0){return true} else {return false}
@@ -38,6 +51,6 @@ export class Enemy {
   getDamage(dmg){
     this.enemyHealth -= dmg;
   }
+ 
 }
 
-// this.currentPlayer = this.currentPlayer === 1 ? 2 : 1;
