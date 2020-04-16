@@ -32,7 +32,9 @@ export class Enemy {
       this.damageOutout = 15; 
     }
   }
-  
+  isDead(){
+   if( this.enemyHealth <= 0){return true} else {return false}
+  }
 }
 
-
+// this.currentPlayer = this.currentPlayer === 1 ? 2 : 1;

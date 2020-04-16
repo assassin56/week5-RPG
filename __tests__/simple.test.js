@@ -25,5 +25,11 @@ describe('Enemy Methods',()=>{
       expect(minotaurEnemy.enemyHealth ).toEqual(150)
       expect(minotaurEnemy.damageOutout ).toEqual(15)
     })
+    test('check if enemy is dead', ()=>{
+      let humanEnemy = new Enemy('human');
+      humanEnemy.populateEnemy();
+      
+    expect(humanEnemy.isDead()).toBeTruthy()
+    })
 })
 
