@@ -35,6 +35,9 @@ export class Enemy {
   isDead(){
    if( this.enemyHealth <= 0){return true} else {return false}
   }
+  getDamage(dmg){
+    this.enemyHealth -= dmg;
+  }
 }
 
 // this.currentPlayer = this.currentPlayer === 1 ? 2 : 1;

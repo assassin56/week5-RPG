@@ -31,5 +31,16 @@ describe('Enemy Methods',()=>{
       humanEnemy.enemyHealth = 0;
     expect(humanEnemy.isDead()).toBeTruthy()
     })
+    test('check if enemy is Alive', ()=>{
+      let humanEnemy = new Enemy('human');
+      humanEnemy.populateEnemy();
+    expect(humanEnemy.isDead()).toBeFalsy()
+    })
+    test('subtract damage from enemy', ()=>{
+      let humanEnemy = new Enemy('human');
+      humanEnemy.populateEnemy();
+      humanEnemy.getDamage(5);
+    expect(humanEnemy.enemyHealth).toBe(15)
+    })
 })
 
