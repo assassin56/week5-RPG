@@ -31,8 +31,8 @@ export class Enemy {
       this.enemyHealth = 150;
       this.damageOutout = 15; 
     }
-    // add stats based on type
   }
+  
 }
 
 
