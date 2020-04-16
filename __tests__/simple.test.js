@@ -24,26 +24,33 @@ describe('Player Methods',()=>{
 })
 
 describe('Enemy Methods',()=>{
-  test("test that Enemy pupulate method gives right info for human",()=>{
+  test("test that Enemy populate method gives right info for human",()=>{
     let humanEnemy = new Enemy('human');
     humanEnemy.populateEnemy();
     expect(humanEnemy.enemyType).toEqual('human')
-    expect(humanEnemy.enemyHealth ).toEqual(50)
-    expect(humanEnemy.damageOutout ).toEqual(20)
+    expect(humanEnemy.enemyHealth).toEqual(50)
+    expect(humanEnemy.damageOutput).toEqual(20)
   })
-    test("test that Enemy pupulate method gives right info for chimera",()=>{
+    test("test that Enemy populate method gives right info for chimera",()=>{
       let chimeraEnemy = new Enemy('chimera');
       chimeraEnemy.populateEnemy();
       expect(chimeraEnemy.enemyType).toEqual('chimera')
       expect(chimeraEnemy.enemyHealth ).toEqual(100)
-      expect(chimeraEnemy.damageOutout ).toEqual(25)
+      expect(chimeraEnemy.damageOutput ).toEqual(25)
     })
-    test("test that Enemy pupulate method gives right info for minotaur",()=>{
+    test("test that Enemy populate method gives right info for minotaur",()=>{
       let minotaurEnemy = new Enemy('minotaur');
       minotaurEnemy.populateEnemy();
       expect(minotaurEnemy.enemyType).toEqual('minotaur')
       expect(minotaurEnemy.enemyHealth ).toEqual(150)
-      expect(minotaurEnemy.damageOutout ).toEqual(15)
+      expect(minotaurEnemy.damageOutput ).toEqual(15)
+    })
+    test("test that Enemy populate method gives right info for scylla",()=>{
+      let scyllaEnemy = new Enemy('scylla');
+      scyllaEnemy.populateEnemy();
+      expect(scyllaEnemy.enemyType).toEqual('scylla')
+      expect(scyllaEnemy.enemyHealth ).toEqual(110)
+      expect(scyllaEnemy.damageOutput ).toEqual(35)
     })
     test('check if enemy is dead', ()=>{
       let humanEnemy = new Enemy('human');
