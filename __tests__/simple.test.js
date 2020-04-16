@@ -28,7 +28,7 @@ describe('Enemy Methods',()=>{
     test('check if enemy is dead', ()=>{
       let humanEnemy = new Enemy('human');
       humanEnemy.populateEnemy();
-      
+      humanEnemy.enemyHealth = 0;
     expect(humanEnemy.isDead()).toBeTruthy()
     })
 })
